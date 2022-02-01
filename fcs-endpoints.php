@@ -40,7 +40,7 @@ function fcs_process_donation($request)
             'recurring' => ['interval' => 'month'],
             'product_data' => array(
                 'name' => 'Donation ' . $plan_name,
-                'statement_descriptor' => 'NBFY Donation'
+                'statement_descriptor' => 'Donation'
             )
         ));
 
@@ -66,7 +66,7 @@ function fcs_process_donation($request)
             'customer' => $customer != null ? $customer->id : null,
             'amount' => $amount,
             'currency' => 'usd',
-            'statement_descriptor' => 'NBFY Donations',
+            'statement_descriptor' => 'Donations',
             'automatic_payment_methods' => [
                 'enabled' => true,
             ],
